@@ -4,9 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class PlayerCollision : MonoBehaviour
+public class PlayerCollision : MonoBehaviour, IDataPersistence
 {
     public List<SimpleItem> inventory = new List<SimpleItem>();
+
+    public void LoadData(GameData data)
+    {
+        this.inventory = data.inventory;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.inventory = this.inventory;
+    }
 
     private void Start()
     {
