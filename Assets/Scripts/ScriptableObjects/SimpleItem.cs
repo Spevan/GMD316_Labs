@@ -7,6 +7,7 @@ public class SimpleItem : ScriptableObject
 {
     public string Name;
     public string Description;
-    public int Quantity;
+    public bool Stackable;
+    public int Quantity, MaxStackSize;
     public Sprite Icon;
 }

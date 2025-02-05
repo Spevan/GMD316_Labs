@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Mana Potion
   Description: Restores Mana by the specified value.
+  Stackable: 1
   Quantity: 1
+  MaxStackSize: 10
   Icon: {fileID: 0}

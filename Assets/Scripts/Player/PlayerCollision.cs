@@ -35,8 +35,11 @@ public class PlayerCollision : MonoBehaviour, IDataPersistence
                 {
                     if (i.Equals(collision.gameObject.GetComponent<Item>().itemData))
                     {
-                        i.Quantity += 1;
-                        Debug.Log(i + " quantity updated to " + i.Quantity);
+                        if(i.Quantity < i.MaxStackSize && i.Stackable)
+                        {
+                            i.Quantity += 1;
+                            Debug.Log(i + " quantity updated to " + i.Quantity);
+                        }
                         break;
                     }
                     else if(count == inventory.Count - 1)
