@@ -16,6 +16,7 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         inventory = GameObject.Find("Player").GetComponent<PlayerCollision>().inventory;
+        Debug.Log(inventory);
         int count = 0;
         foreach (SimpleItem i in inventory)
         {

@@ -15,6 +15,9 @@ MonoBehaviour:
   Name: Sword
   Description: Deals damage by the specified value in a short range.
   Stackable: 0
+  type: 0
   Quantity: 1
   MaxStackSize: 1
+  DmgOrHealing: 10
+  rarity: 0
   Icon: {fileID: 0}
