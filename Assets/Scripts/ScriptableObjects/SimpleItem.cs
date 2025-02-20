@@ -8,6 +8,21 @@ public class SimpleItem : ScriptableObject
     public string Name;
     public string Description;
     public bool Stackable;
-    public int Quantity, MaxStackSize;
+    public ItemType type;
+    public enum ItemType
+    {
+        Weapon,
+        Potion,
+        Crafting_Material
+    }
+    public int Quantity, MaxStackSize, DmgOrHealing;
+    public Rarity rarity;
+    public enum Rarity
+    {
+        Common,
+        Uncommon,
+        Rare,
+        Legendary
+    }
     public Sprite Icon;
 }
