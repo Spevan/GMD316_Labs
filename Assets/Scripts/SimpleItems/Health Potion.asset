@@ -16,7 +16,7 @@ MonoBehaviour:
   Description: Restores health by the specified value.
   Stackable: 1
   type: 1
-  Quantity: 1
+  Quantity: 20
   MaxStackSize: 10
   DmgOrHealing: 10
   rarity: 0

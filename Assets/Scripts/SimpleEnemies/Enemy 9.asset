@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Enemy 9
   m_EditorClassIdentifier: 
   Name: Silky
-  Health: 14
-  AtkPower: 4
+  Health: 1400
+  AtkPower: 100
   Speed: 5
+  weakness: 0
