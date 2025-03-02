@@ -6,7 +6,7 @@ using UnityEngine;
 public class SimpleCharacter : ScriptableObject
 {
     public string Name;
-    public int Health;
-    public float Speed;
+    public int EXP, LVL;
+    public float Health, Speed, Mana, AtkPower;
     public List<string> Skills;
 }

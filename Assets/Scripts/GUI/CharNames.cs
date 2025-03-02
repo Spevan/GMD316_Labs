@@ -10,7 +10,7 @@ public class CharNames : MonoBehaviour
     private void Awake()
     {
         UpdateCharName(PlayerController.Instance.player.Name);
-        UpdateCharHealth(PlayerController.Instance.player.Health);
+        UpdateCharHealth((int)PlayerController.Instance.player.Health);
     }
 
     public void UpdateCharName(string name)

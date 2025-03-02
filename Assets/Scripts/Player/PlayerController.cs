@@ -30,7 +30,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        player.Speed = 5.0f;
     }
 
     // Update is called once per frame

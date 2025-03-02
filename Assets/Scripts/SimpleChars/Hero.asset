@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: Hero
   m_EditorClassIdentifier: 
   Name: Hero
+  EXP: 0
+  LVL: 1
   Health: 100
   Speed: 5
+  Mana: 10
+  AtkPower: 50
   Skills:
   - Attack
   - Defend

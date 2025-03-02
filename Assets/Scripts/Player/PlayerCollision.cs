@@ -61,9 +61,17 @@ public class PlayerCollision : MonoBehaviour, IDataPersistence
         }
     }
 
-    public void RemoveItem(int itemNum)
+    public int RemoveItem(int itemNum)
     {
-        inventory[itemNum].Quantity = 0;
-        inventory.RemoveAt(itemNum);
+        inventory[itemNum].Quantity -= 1;
+        if (inventory[itemNum].Quantity <= 0)
+        {
+            inventory.RemoveAt(itemNum);
+            if (PlayerController.Instance.player.Health < 0)
+            {
+                return inventory[itemNum].Quantity;
+            }
+        }
+        return 0;
     }
 }
