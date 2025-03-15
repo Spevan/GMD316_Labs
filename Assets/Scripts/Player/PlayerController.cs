@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     public SimpleCharacter player;
     public SimpleQuest quest;
+    public PlayerStats stats;
 
     public static PlayerController Instance { get; private set; }
 

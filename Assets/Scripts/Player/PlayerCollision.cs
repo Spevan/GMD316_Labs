@@ -7,6 +7,7 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour, IDataPersistence
 {
     public List<SimpleItem> inventory = new List<SimpleItem>();
+    public StatUpdate StatUpdate;
 
     public void LoadData(GameData data)
     {
@@ -58,6 +59,21 @@ public class PlayerCollision : MonoBehaviour, IDataPersistence
                 Debug.Log("first item");
             }
             //inventory.Add(collision.gameObject.GetComponent<ScriptableObject>());
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Enemy"))
+        {
+            StatUpdate.UpdateHealth(-10);
+            StatUpdate.UpdateExperience(5);
+            if (StatUpdate.PlayerStats.Experience >= 10)
+            {
+                StatUpdate.UpdateStrength(1);
+                StatUpdate.UpdateAgility(1);
+                StatUpdate.PlayerStats.Experience = StatUpdate.PlayerStats.BaseExperience;
+            }
         }
     }
 

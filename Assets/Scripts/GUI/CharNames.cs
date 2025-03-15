@@ -7,10 +7,10 @@ public class CharNames : MonoBehaviour
 {
     public TextMeshProUGUI charName, charHealth;
 
-    private void Awake()
+    private void Update()
     {
         UpdateCharName(PlayerController.Instance.player.Name);
-        UpdateCharHealth((int)PlayerController.Instance.player.Health);
+        UpdateCharHealth((int)PlayerController.Instance.stats.Health);
     }
 
     public void UpdateCharName(string name)
@@ -22,4 +22,6 @@ public class CharNames : MonoBehaviour
     {
         charHealth.text = health.ToString();
     }
+
+
 }
